@@ -36,7 +36,7 @@ const CharacterList = ({onHeroSelect}) => {
 
     return (
         <>
-            <h3>Heroes</h3>
+            <h3 className="center">Heroes</h3>
             
             <div className='container'>
                 

@@ -25,7 +25,7 @@ const CharacterDetail = ({characterId}) => {
 
     return (
         <div>
-            <h2>Character Details</h2>
+            <h3>Character Details</h3>
             <ul>
                 {hero && (
                     <>

@@ -1,12 +1,15 @@
 .container {
   display: flex;
   justify-content: space-around;
-  border: 2px solid black;
   flex-wrap:nowrap;
 
 }
 
 .mainContainer {
   width: 90%;
-  border: 2px solid black;
+  
+}
+
+.center {
+  text-align: center;
 }
