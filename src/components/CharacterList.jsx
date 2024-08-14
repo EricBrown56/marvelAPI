@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const CharacterList = () => {
+const CharacterList = ({onHeroSelect}) => {
     const [heroes, setHeroes] = useState([]);
+    
+    
     
 
     useEffect(() => {
@@ -16,27 +18,33 @@ const CharacterList = () => {
             }
         };
 
+        
+
         fetchHeroes();
 
-    
+        
+
+
+        
 
     }, []);
 
-   
-
+    
+    
+    
     
 
     return (
-        <div className='hero-list'>
+        <div>
             <h3>Heroes</h3>
             <ul>
                 {heroes.map(hero => (
                     
-                    <li key={hero.id}>
+                    <div key={hero.id} onClick={() => onHeroSelect(hero.id)}>
                         <b>{hero.name}</b><br/>
                         <img src={`${hero.thumbnail.path}/portrait_xlarge.${hero.thumbnail.extension}`} alt={hero.name} />
                     
-                    </li>
+                    </div>
                 ))}
             </ul>
         </div>

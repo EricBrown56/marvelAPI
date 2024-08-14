@@ -1,17 +1,18 @@
 import './App.css'
-import './index.css'
 import CharacterList from './components/CharacterList'
 import CharacterDetail from './components/CharacterDetail'
-
+import { useState } from 'react'
 
 
 function App() {
-  
+const [selectedHero, setSelectedHero] = useState(null);
 
   return (
     <>
-      <CharacterList />
-      <CharacterDetail />
+    <div className="">
+      <CharacterList onHeroSelect={setSelectedHero}/>
+    </div>
+      <CharacterDetail characterId={selectedHero}/>
     </>
   )
 }
