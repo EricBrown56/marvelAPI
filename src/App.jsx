@@ -9,7 +9,7 @@ const [selectedHero, setSelectedHero] = useState(null);
 
   return (
     <>
-    <div className="">
+    <div className="mainContainer">
       <CharacterList onHeroSelect={setSelectedHero}/>
     </div>
       <CharacterDetail characterId={selectedHero}/>

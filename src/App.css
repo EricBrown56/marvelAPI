@@ -1,10 +1,12 @@
 .container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr; /*1fr is 1 fraction of the available space*/
-  grid-template-rows: 200px 300px 150px; /*can use px, %, fr, auto*/
-  gap: 10px; /*space between the grid items*/
-  margin: 0 auto; /*centers the grid, may not always work*/
-  width: 80%; /*width of the grid*/
+  display: flex;
+  justify-content: space-around;
   border: 2px solid black;
+  flex-wrap:nowrap;
 
+}
+
+.mainContainer {
+  width: 90%;
+  border: 2px solid black;
 }

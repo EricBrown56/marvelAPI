@@ -35,19 +35,23 @@ const CharacterList = ({onHeroSelect}) => {
     
 
     return (
-        <div>
+        <>
             <h3>Heroes</h3>
-            <ul>
-                {heroes.map(hero => (
-                    
-                    <div key={hero.id} onClick={() => onHeroSelect(hero.id)}>
-                        <b>{hero.name}</b><br/>
-                        <img src={`${hero.thumbnail.path}/portrait_xlarge.${hero.thumbnail.extension}`} alt={hero.name} />
-                    
-                    </div>
-                ))}
-            </ul>
-        </div>
+            
+            <div className='container'>
+                
+                
+                    {heroes.map(hero => (
+                        
+                        <div key={hero.id} onClick={() => onHeroSelect(hero.id)}>
+                            <b>{hero.name}</b><br/>
+                            <img src={`${hero.thumbnail.path}/portrait_xlarge.${hero.thumbnail.extension}`} alt={hero.name} />
+                        
+                        </div>
+                    ))}
+                
+            </div>
+        </>
     );
 }
 
