@@ -4,11 +4,7 @@ import axios from 'axios';
 const CharacterDetail = ({characterId}) => {
     const [hero, setHero] = useState(null);
     
-   
-
-
-
-    useEffect(() => {
+   useEffect(() => {
        
         const fetchDetails = async () => {
             try {

@@ -4,9 +4,6 @@ import axios from 'axios';
 const CharacterList = ({onHeroSelect}) => {
     const [heroes, setHeroes] = useState([]);
     
-    
-    
-
     useEffect(() => {
         const fetchHeroes = async () => {
             try {
@@ -18,21 +15,9 @@ const CharacterList = ({onHeroSelect}) => {
             }
         };
 
-        
-
         fetchHeroes();
 
-        
-
-
-        
-
     }, []);
-
-    
-    
-    
-    
 
     return (
         <>
@@ -40,8 +25,7 @@ const CharacterList = ({onHeroSelect}) => {
             
             <div className='container'>
                 
-                
-                    {heroes.map(hero => (
+                {heroes.map(hero => (
                         
                         <div key={hero.id} onClick={() => onHeroSelect(hero.id)}>
                             <b>{hero.name}</b><br/>
